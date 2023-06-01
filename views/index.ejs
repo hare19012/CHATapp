@@ -1,30 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= kod %></title>
+<head>
+  <title><%= kod %></title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-  <div class="container-fluid">
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
   <div class="row flex-nowrap">
     <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
       <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <span class="fs-5 d-none d-sm-inline">Menu</span>
+        </a>
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link align-middle px-0">
+              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+            </a>
+          </li>
           <li>
             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Online</span> </a>
+              <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-
+              <li class="w-100">
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
+              </li>
             </ul>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-0 align-middle">
+              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
+          </li>
+          <li>
+            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+              <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
+            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
+              <li class="w-100">
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+              <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
+            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+              <li class="w-100">
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-0 align-middle">
+              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
           </li>
         </ul>
         <hr>
         <div class="dropdown pb-4">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="hugenerd" width="30" height="30" class="rounded-circle">
-            <span class="d-none d-sm-inline mx-1"><%=imee%></span>
+            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1">loser</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li><a class="dropdown-item" href="#">New project...</a></li>
@@ -39,21 +90,23 @@
       </div>
     </div>
     <div class="col py-3">
-      <div class="container">
-        <div id="poruke">
+      <div class="col py-3 main-content">
+        <div class="container">
+          <div id="poruke" class="moja">
 
+          </div>
         </div>
-      </div>
-      <div class="container unos">
-        <div class="row"><input type="text" id="polje" class="form-control" placeholder="Aa" style="margin: 10px"></div>
-        <div class="row drugi"><button type="button" onclick="salji()" class="btn btn-success" style="width: 15%;margin: 10px">Sent</button></div>
+        <div class="container unos">
+          <div class="row"><input type="text" id="polje" class="form-control" placeholder="Aa" style="margin: 10px"></div>
+          <div class="row drugi"><button type="button" onclick="salji()" class="btn btn-success" style="width: 15%;margin: 10px">Sent</button></div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</div>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript">
@@ -69,37 +122,94 @@
   socket.emit('Joino se klijent',"<%=imee%>");
   socket.on('USAO_U_RAZGOVOR',function (poruka){
     var nova = document.createElement('div');
-    nova.setAttribute('class','alert alert-success rok');
-    nova.setAttribute('style','background-color:aquamarine');
-    if (poruka === "Pridružili ste se chatu") {
+    //nova.setAttribute('class','alert alert-success rok');
+    nova.setAttribute('style','text-align:center;color:green');
+    if (poruka === "You have joined the conversation!") {
       nova.innerHTML = poruka;
     } else {
-      nova.innerHTML = poruka + " se pridruzio chatu";
+      nova.innerHTML = poruka + " joined the conversation!";
     }
     var glavna =  document.getElementById('poruke');
     glavna.appendChild(nova)
 
 
+
   });
   socket.on('IZASAO_IZ_RAZGOVORA', function (ime) {
     var nova = document.createElement('div');
-    nova.setAttribute('class', 'alert alert-danger rok');
-    nova.setAttribute('style', 'background-color:lightcoral');
-    nova.innerHTML = ime + " je napustio/la razgovor"; // Prikazuje poruku da je korisnik napustio razgovor
+    nova.setAttribute('style', 'text-align:center;color:red');
+    nova.innerHTML = ime + " left the conversation!"; // Prikazuje poruku da je korisnik napustio razgovor
     var glavna = document.getElementById('poruke');
     glavna.appendChild(nova);
 
   });
   socket.on('Online korisnici', function (korisnici) {
     console.log(korisnici);
-
+    var korisnikElement = document.getElementById("submenu1");
+    korisnikElement.innerHTML = ""; // Prvo praznimo element
     korisnici.forEach(function (korisnik) {
       if (korisnik !== '<%=imee%>') { // Prikazujte samo ostale korisnike, ne i trenutnog korisnika (samog sebe)
-        var korisnikElement = document.getElementById("submenu1");
         var nova = document.createElement('li');
         nova.innerHTML = korisnik;
         korisnikElement.appendChild(nova);
       }
     });
+
   });
+  socket.on('Svima poruka',function (poruka){
+    const div = document.querySelector('#poruke');
+    var nova = document.createElement('div');
+    nova.setAttribute('class', 'alert alert-success rok');
+    var nova1 = document.createElement('div');
+    nova1.setAttribute('class', 'row');
+    nova1.setAttribute('style', 'color:blue');
+    nova1.innerHTML=poruka[0].ime;
+    var nova2 = document.createElement('div');
+    nova2.setAttribute('class', 'row');
+    nova2.innerHTML=poruka[0].prouka;
+
+    nova.appendChild(nova1);
+    nova.appendChild(nova2);
+    div.appendChild(nova);
+    setTimeout(function() {
+      document.getElementById("polje").scrollIntoView();
+    }, 0);
+  });
+  socket.on('Sve_poruke',function (Poruke) {
+    const div = document.querySelector('#poruke');
+    console.log(Poruke);
+    if(div.className === "moja") {
+      for (let i = 0; i < Poruke.length; i++) {
+        var nova = document.createElement('div');
+        nova.setAttribute('class', 'alert alert-success rok');
+        var nova1 = document.createElement('div');
+        nova1.setAttribute('class', 'row');
+        nova1.setAttribute('style', 'color:blue');
+        nova1.innerHTML=Poruke[i].ime;
+        var nova2 = document.createElement('div');
+        nova2.setAttribute('class', 'row');
+        nova2.innerHTML=Poruke[i].prouka;
+
+        nova.appendChild(nova1);
+        nova.appendChild(nova2);
+        div.appendChild(nova);
+      }
+      div.classList.remove("moja");
+      div.classList.add("tvoja");
+    }
+  });
+  var enter = document.getElementById("polje");
+  enter.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      salji();
+    }
+  });
+  function salji(){
+    var poruka = document.getElementById('polje').value;
+    document.getElementById('polje').value = '';
+    if(poruka !== "")
+      socket.emit('Salje poruku',poruka,"<%=imee%>");
+
+  }
 </script>
