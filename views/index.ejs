@@ -1,91 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= kod %></title>
-
+  <title>Global chat</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <!-- Latest compiled and minified CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <div class="container-fluid">
   <div class="row flex-nowrap">
     <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-        <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-          <span class="fs-5 d-none d-sm-inline">Menu</span>
-        </a>
+      <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 sticky-top">
         <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-          <li class="nav-item">
-            <a href="#" class="nav-link align-middle px-0">
-              <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
-            </a>
-          </li>
           <li>
             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
+              <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Online</span> </a>
             <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
-              <li class="w-100">
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1 </a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2 </a>
-              </li>
+
             </ul>
-          </li>
-          <li>
-            <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-          </li>
-          <li>
-            <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-              <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-            <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-              <li class="w-100">
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 1</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Item</span> 2</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Products</span> </a>
-            <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-              <li class="w-100">
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
-              </li>
-              <li>
-                <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Customers</span> </a>
           </li>
         </ul>
-        <hr>
         <div class="dropdown pb-4">
-          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-            <span class="d-none d-sm-inline mx-1">loser</span>
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/images/avatar.jpg" alt="hugenerd"   class="avatar">
+            <span class="d-none d-sm-inline mx-1"><%=imee%></span>
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+
         </div>
       </div>
     </div>
@@ -97,8 +38,8 @@
           </div>
         </div>
         <div class="container unos">
-          <div class="row"><input type="text" id="polje" class="form-control" placeholder="Aa" style="margin: 10px"></div>
-          <div class="row drugi"><button type="button" onclick="salji()" class="btn btn-success" style="width: 15%;margin: 10px">Sent</button></div>
+          <div class="row"><input type="text" id="polje" class="myinput" placeholder="Aa" style="margin: 10px"></div>
+          <div class="my-row"><button type="button" onclick="salji()" class="my-button" style="width: 15%;margin: 10px">Send</button></div>
         </div>
       </div>
     </div>
@@ -119,8 +60,8 @@
   };
 
   var socket = io.connect('ws://localhost:3000');
-  socket.emit('Joino se klijent',"<%=imee%>");
-  socket.on('USAO_U_RAZGOVOR',function (poruka){
+  socket.emit('Client join',"<%=imee%>");
+  socket.on('Entered into the conversation',function (poruka){
     var nova = document.createElement('div');
     //nova.setAttribute('class','alert alert-success rok');
     nova.setAttribute('style','text-align:center;color:green');
@@ -135,7 +76,7 @@
 
 
   });
-  socket.on('IZASAO_IZ_RAZGOVORA', function (ime) {
+  socket.on('Disconnected from the conversation', function (ime) {
     var nova = document.createElement('div');
     nova.setAttribute('style', 'text-align:center;color:red');
     nova.innerHTML = ime + " left the conversation!"; // Prikazuje poruku da je korisnik napustio razgovor
@@ -143,60 +84,106 @@
     glavna.appendChild(nova);
 
   });
-  socket.on('Online korisnici', function (korisnici) {
-    console.log(korisnici);
+  socket.on('Online users', function (korisnici) {
     var korisnikElement = document.getElementById("submenu1");
     korisnikElement.innerHTML = ""; // Prvo praznimo element
     korisnici.forEach(function (korisnik) {
       if (korisnik !== '<%=imee%>') { // Prikazujte samo ostale korisnike, ne i trenutnog korisnika (samog sebe)
         var nova = document.createElement('li');
-        nova.innerHTML = korisnik;
+        var nova2 = document.createElement('span');
+        var nova3 = document.createElement('span');
+        nova2.innerHTML = '<i class="fa fa-circle" style="font-size:15px;color:green"></i>';
+        nova3.setAttribute('style','cursor:pointer;margin-right:5px');
+        nova3.setAttribute('id',korisnik);
+        nova3.innerHTML = korisnik;
+        nova3.onclick = function(){
+          socket.emit("Private message","<%=imee%>",korisnik);
+
+
+        }
+        nova.appendChild(nova3);
+        nova.appendChild(nova2);
         korisnikElement.appendChild(nova);
       }
+
     });
 
+
   });
-  socket.on('Svima poruka',function (poruka){
+  socket.on('A message to everyone',function (poruka){
     const div = document.querySelector('#poruke');
     var nova = document.createElement('div');
-    nova.setAttribute('class', 'alert alert-success rok');
+    var kolona1 = document.createElement('div');
+    kolona1.setAttribute('class', 'mycol-img');
+    kolona1.innerHTML = '<img src="/images/avatar.jpg"  alt="hugenerd" class="avatar">';
+    var kolona2 = document.createElement('div');
+    kolona2.setAttribute('class', 'alertt my-col');
+    nova.setAttribute('class', 'my-row');
     var nova1 = document.createElement('div');
-    nova1.setAttribute('class', 'row');
+    nova1.setAttribute('class', 'my-row');
     nova1.setAttribute('style', 'color:blue');
-    nova1.innerHTML=poruka[0].ime;
+    if(poruka[0].ime === "<%=imee%>")
+      nova1.innerHTML="You";
+    else nova1.innerHTML = poruka[0].ime;
     var nova2 = document.createElement('div');
-    nova2.setAttribute('class', 'row');
+    nova2.setAttribute('class', 'my-row');
     nova2.innerHTML=poruka[0].prouka;
-
-    nova.appendChild(nova1);
-    nova.appendChild(nova2);
+    kolona2.appendChild(nova1);
+    kolona2.appendChild(nova2);
+    nova.appendChild(kolona1);
+    nova.appendChild(kolona2);
     div.appendChild(nova);
     setTimeout(function() {
       document.getElementById("polje").scrollIntoView();
     }, 0);
   });
-  socket.on('Sve_poruke',function (Poruke) {
+  socket.on('All messages',function (Poruke) {
     const div = document.querySelector('#poruke');
     console.log(Poruke);
     if(div.className === "moja") {
       for (let i = 0; i < Poruke.length; i++) {
         var nova = document.createElement('div');
-        nova.setAttribute('class', 'alert alert-success rok');
+        var kolona1 = document.createElement('div');
+        kolona1.setAttribute('class', 'mycol-img');
+        kolona1.innerHTML = '<img src="/images/avatar.jpg" alt="hugenerd" class="avatar">';
+        var kolona2 = document.createElement('div');
+        kolona2.setAttribute('class', 'alertt my-col');
+        nova.setAttribute('class', 'my-row');
         var nova1 = document.createElement('div');
-        nova1.setAttribute('class', 'row');
+        nova1.setAttribute('class', 'my-row');
         nova1.setAttribute('style', 'color:blue');
         nova1.innerHTML=Poruke[i].ime;
         var nova2 = document.createElement('div');
-        nova2.setAttribute('class', 'row');
+        nova2.setAttribute('class', 'my-row');
         nova2.innerHTML=Poruke[i].prouka;
+        kolona2.appendChild(nova1);
+        kolona2.appendChild(nova2);
 
-        nova.appendChild(nova1);
-        nova.appendChild(nova2);
+        nova.appendChild(kolona1);
+        nova.appendChild(kolona2);
         div.appendChild(nova);
       }
       div.classList.remove("moja");
       div.classList.add("tvoja");
     }
+  });
+  socket.on('Entered into a private conversation',function (poruka,saljem){
+    console.log("okkk");
+    var prouke = document.getElementById('poruke');
+    poruke.innerHTML = "";
+    poruke.id = "privatne";
+    var nova = document.createElement('div');
+    //nova.setAttribute('class','alert alert-success rok');
+    nova.setAttribute('style','text-align:center;color:green');
+    nova.innerHTML = poruka;
+    var glavna = document.getElementById('privatne');
+    var user = document.getElementById(saljem);
+    user.style.color = "blue";
+
+    glavna.appendChild(nova)
+
+
+
   });
   var enter = document.getElementById("polje");
   enter.addEventListener("keypress", function(event) {
@@ -209,7 +196,7 @@
     var poruka = document.getElementById('polje').value;
     document.getElementById('polje').value = '';
     if(poruka !== "")
-      socket.emit('Salje poruku',poruka,"<%=imee%>");
+      socket.emit('Message',poruka,"<%=imee%>");
 
   }
 </script>
