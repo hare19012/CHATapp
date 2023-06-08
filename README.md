@@ -1,22 +1,22 @@
 CHATapp
 
-Opis projekta
+Opis projekta:
 Cilj ovog projekta je implementacija full-stack chat aplikacije. Aplikacija omogućava
 korisnicima da se priključe globalnom chatu, gdje mogu slati poruke koje će biti vidljive
 svim ostalim korisnicima. Također, aplikacija omogućava slanje privatnih poruka između
 korisnika.
 
-Tehnologija
+Tehnologija:
 Za implementaciju projekta odabrana je tehnologija Node.js. Node.js je open-source
 okruženje za izvođenje JavaScript koda na serverskoj strani. Ovo okruženje omogućava
 izgradnju brzih i skalabilnih web aplikacija.
 Struktura projekta
 Projekt je organizovan u dva dijela - backend i frontend.
 
-Grid
+Grid:
 Sidebar – bootstrap, sve ostalo je css.
 
-Backend
+Backend:
 Backend dio aplikacije je implementiran koristeći Node.js i Express framework. Glavni fajl
 backend-a je index.js. U ovom fajlu se postavljaju rute i definiraju akcije koje se
 izvršavaju prilikom zahtjeva klijenta.
@@ -35,7 +35,7 @@ korisnicima u sobi.
 • Kada korisnik pošalje privatnu poruku, server koristi sobu s privatnim
 identifikatorom za komunikaciju između korisnika.
 
-Frontend
+Frontend:
 Frontend dio aplikacije je implementiran koristeći HTML, CSS i JavaScript. Glavni fajl
 frontend-a je index.html. U ovom fajlu je definirana struktura stranice, stilizacija i
 JavaScript kod za komunikaciju s backend-om putem Socket.io biblioteke.
@@ -53,7 +53,7 @@ korisničkim imenom i sadržajem poruke.
 frontend-u.
 • Kada server emitira događaj "Message", prikazuje se nova poruka na frontend-u.
 
-Upute za pokretanje
+Upute za pokretanje:
 Alat koji sam koristio za upravljanje projektom je github.
 1. Preuzmite projekt s GitHub repozitorija.(“
 https://github.com/hare19012/CHATapp.git”) – git clone
