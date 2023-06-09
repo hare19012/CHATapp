@@ -1,4 +1,5 @@
 CHATapp
+NAPOMENA: Treba naglasiti da je baza LOKALNA(PG ADMIN).
 
 Opis projekta:
 Cilj ovog projekta je implementacija full-stack chat aplikacije. Aplikacija omogućava
@@ -22,7 +23,7 @@ backend-a je index.js. U ovom fajlu se postavljaju rute i definiraju akcije koje
 izvršavaju prilikom zahtjeva klijenta.
 Backend koristi PostgreSQL bazu podataka za pohranu poruka,a online korisnici su
 smješteni u privremenu varijablu. Komunikacija s bazom podataka se vrši korištenjem pg
-modula. Treba naglasiti da je baza LOKALNA(PG ADMIN).
+modula.
 Također, u backend-u se koristi socket.io biblioteka za realtime komunikaciju između
 servera i klijenata. Socket.io omogućava emitiranje i primanje događaja između servera i
 klijenata u stvarnom vremenu.
@@ -64,7 +65,8 @@ https://github.com/hare19012/CHATapp.git”) – git clone
 izvršavanjem naredbe docker-compose up, jer je aplikacija zapakovana u docker
 radi lakšeg pokretanja I na drugim računarima.
 6. Otvorite pretraživač i posjetite http://localhost:3000 kako biste vidjeli aplikaciju.
-Moguća poboljšanja
+
+Moguća poboljšanja:
 Ovaj projekt predstavlja osnovnu implementaciju chat aplikacije. Moguća poboljšanja
 uključuju:
 • Dodavanje autentifikacije korisnika kako bi se osiguralo da samo prijavljeni
@@ -73,4 +75,5 @@ korisnici mogu pristupiti chatu.
 • Brisanje, lajkanje poruka.
 Ovo su samo neki prijedlozi za poboljšanje, a mogućnosti su neograničene ovisno o
 potrebama i zahtjevima projekta.
+
 Napomena: U kodu se nalaze komentari koji opisuju svaku funkcionalnost.
