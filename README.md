@@ -1,5 +1,6 @@
 CHATapp
-NAPOMENA: Treba naglasiti da je baza LOKALNA(PG ADMIN).
+
+NAPOMENA: TREBA NAGLASITI DA JE BAZA LOKALNA(PG ADMIN).
 
 Opis projekta:
 Cilj ovog projekta je implementacija full-stack chat aplikacije. Aplikacija omogućava
