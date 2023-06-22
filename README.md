@@ -1,6 +1,7 @@
-CHATapp
+# CHATapp
 
-NAPOMENA: TREBA NAGLASITI DA JE BAZA LOKALNA(PG ADMIN).
+# NAPOMENA: TREBA NAGLASITI DA JE BAZA LOKALNA(PG ADMIN).
+# Tabela se zove chat(id(auto increment),poruka,ime)
 
 Opis projekta:
 Cilj ovog projekta je implementacija full-stack chat aplikacije. Aplikacija omogućava
